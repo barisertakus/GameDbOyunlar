@@ -1,0 +1,26 @@
+﻿@model Oyunlar.Models.Oyun;
+@{
+    ViewData["Title"] = "YeniOyun";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<form class="form-group" method="post">
+    <b>Oyun Adı</b>
+    @Html.TextBoxFor(x => x.oyunAdi, new { @class = "form-control" })
+    <br />
+    <b>Oyun Boyutu</b>
+    @Html.TextBoxFor(x => x.boyut, new { @class = "form-control" })
+    <br />
+    <b>Oyun Yayınlanma Tarihi</b>
+    @Html.TextBoxFor(x => x.yayinlamaTarihi, new { @class = "form-control" })
+    <br />
+    <b>Oyun resim yolu</b>
+    @Html.TextBoxFor(x => x.resim, new { @class = "form-control" })
+    <br />
+    <b>Kategori Adı</b>
+    @Html.DropDownListFor(x => x.Kategori.KategoriID, (List<SelectListItem>)ViewBag.dgr, new { @class = "from-control" })
+    <br />
+    <button class="btn btn-success">Ekle</button>
+
+</form>

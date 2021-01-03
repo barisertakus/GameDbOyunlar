@@ -1,0 +1,23 @@
+﻿@model Oyunlar.Models.Kategori
+@{
+    ViewData["Title"] = "KategoriGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>KategoriGetir</h1>
+
+@using (Html.BeginForm("KategoriGuncelle", "Kategori", FormMethod.Post))
+{
+    <b>Kategori Id</b>
+    @Html.TextBoxFor(x => x.KategoriID, new { @class = "form-control" })
+    <br />
+
+
+    <b>Kategori Adı</b>
+    @Html.TextBoxFor(x => x.KategoriAd, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-danger">Güncelle</button>
+
+
+
+}

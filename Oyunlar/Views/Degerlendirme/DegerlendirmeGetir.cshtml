@@ -1,0 +1,29 @@
+﻿@model Oyunlar.Models.Degerlendirme
+@{
+    ViewData["Title"] = "DegerlendirmeGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>DegerlendirmeGetir</h1>
+
+
+@using (Html.BeginForm("DegerlendirmeGuncelle", "Degerlendirme", @Model.degerlendirmeID, FormMethod.Post))
+{
+    <b>ID</b>
+    @Html.TextBoxFor(x => x.degerlendirmeID, new { @class = "form-control" })
+    <br />
+ 
+
+    <b>Puan</b>
+    @Html.TextBoxFor(x => x.puan, new { @class = "form-control" })
+    <br />
+
+    <b>Yorum</b>
+    @Html.TextBoxFor(x => x.yorum, new { @class = "form-control" })
+    <br />
+
+    <button class="btn btn-danger">Güncelle</button>
+
+
+
+}

@@ -1,0 +1,43 @@
+﻿@using Oyunlar.Models
+@model List<Admin>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>Index</h1>
+
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<table class="table table-bordered">
+    <tr>
+        <th>Kullanici ID</th>
+        <th>Kullanici Adı</th>
+        <th>Kullanici Mail</th>
+        <th>Kullanici Şifre</th>
+        <th>Admin Mi ?</th>
+        
+
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <th>@x.adminID</th>
+            <th>@x.kullaniciAdi</th>
+            <th>@x.mail</th>
+            <th>@x.sifre</th>
+            <th>@x.adminMi</th>
+      
+
+        </tr>
+    }
+
+
+</table>
+
+

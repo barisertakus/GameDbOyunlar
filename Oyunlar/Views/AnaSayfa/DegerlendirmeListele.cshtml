@@ -1,0 +1,33 @@
+﻿
+@using Oyunlar.Models
+@model List<Degerlendirme>
+@{
+    ViewData["Title"] = "DegerlendirmeListele";
+    Layout = "~/Views/Shared/_AnaLayout.cshtml";
+}
+
+<br />
+<h2>@ViewBag.kat</h2>
+<br />
+
+<table class="table table-bordered">
+    <tr>
+        <th>Puan</th>
+        <th>Yorum</th>
+        <th>Boyut(MB)</th>
+        <th>Puan</th>
+
+
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <th>@x.puan</th>
+            <th>@x.yorum</th>
+            <th>@x.oyunID</th>
+            <th>@x.kullaniciID</th>
+        </tr>
+    }
+
+
+</table>

@@ -1,0 +1,37 @@
+﻿@using Oyunlar.Models
+@model List<Degerlendirme>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Oyun ID</th>
+        <th>Puan</th>
+        <th>yorum</th>
+        <th>Kullanici ID</th>
+        <th>Kategori</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <th>@x.degerlendirmeID</th>
+            <th>@x.oyunID</th>
+            <th>@x.puan</th>
+            <th>@x.yorum</th>
+            <th>@x.kullaniciID</th>
+
+            <th><a href="/Degerlendirme/DegerlendirmeSil/@x.degerlendirmeID" class=" btn btn-danger">Sil</a></th>
+            <th><a href="/Degerlendirme/DegerlendirmeGetir/@x.degerlendirmeID" class=" btn btn-warning">Güncelle</a></th>
+
+
+        </tr>
+    }
+
+
+</table>
+<a href="/Degerlendirme/YeniDegerlendirme" class=" btn btn-success">Yeni Degerlendirme</a></th>

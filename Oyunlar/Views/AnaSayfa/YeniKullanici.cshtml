@@ -1,0 +1,31 @@
+﻿@model Oyunlar.Models.Admin;
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>YeniKullanici</title>
+</head>
+<body>
+    <form class="form-group" method="post">
+
+
+        <b>Kullanici Adi</b>
+        @Html.TextBoxFor(x => x.kullaniciAdi, new { @class = "form-control" })
+        <br />
+        <b>Sifre</b>
+        @Html.TextBoxFor(x => x.sifre, new { @class = "form-control" })
+        <br />
+        <b>Sifre</b>
+        @Html.TextBoxFor(x => x.mail, new { @class = "form-control" })
+        <br />
+
+        <button class="btn btn-success">Kayıt OL</button>
+
+    </form>
+</body>
+</html>

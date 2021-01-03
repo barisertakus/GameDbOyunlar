@@ -1,0 +1,27 @@
+﻿
+@using Oyunlar.Models
+@model List<Kategori>
+@{
+    ViewData["Title"] = "Kategori";
+    Layout = "~/Views/Shared/_AnaLayout.cshtml";
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th>Kategori</th>
+        <th>Oyunları Gör</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <th>@x.KategoriID</th>
+            <th>@x.KategoriAd</th>
+            <th><a href="/Kategori/OyunListele/@x.KategoriID" class=" btn btn-success">Oyunlar..</a></th>
+
+        </tr>
+    }
+
+
+</table>
+
+

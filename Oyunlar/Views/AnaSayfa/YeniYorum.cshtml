@@ -1,0 +1,20 @@
+﻿@model Oyunlar.Models.Degerlendirme;
+@{
+    ViewData["Title"] = "YeniYorum";
+    Layout = "~/Views/Shared/_AnaLayout.cshtml";
+}
+
+<h1>Yeni Yorum</h1>
+
+
+<br />
+<form class="form-group" method="post">
+    <b>Yorum</b>
+    @Html.TextBoxFor(x => x.yorum, new { @class = "form-control" })
+    <br />
+    <b>Oyun Boyutu</b>
+    @Html.TextBoxFor(x => x.puan, new { @class = "form-control" })
+    <br />  
+    <button class="btn btn-success">Ekle</button>
+
+</form>

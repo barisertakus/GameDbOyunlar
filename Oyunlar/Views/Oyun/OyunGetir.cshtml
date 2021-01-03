@@ -1,0 +1,35 @@
+﻿@model Oyunlar.Models.Oyun
+@{
+    ViewData["Title"] = "OyunGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@using (Html.BeginForm("OyunGuncelle", "Oyun", @Model.oyunID, FormMethod.Post))
+{
+    <b>ID</b>
+    @Html.TextBoxFor(x => x.oyunID, new { @class = "form-control" })
+    <br />
+
+    <b>Oyun Adı</b>
+    @Html.TextBoxFor(x => x.oyunAdi, new { @class = "form-control" })
+    <br />
+
+    <b>Boyut</b>
+    @Html.TextBoxFor(x => x.boyut, new { @class = "form-control" })
+    <br />
+
+    <b>Puan</b>
+    @Html.TextBoxFor(x => x.puan, new { @class = "form-control" })
+    <br />
+
+    <b>Yayinlanma Tarihi</b>
+    @Html.TextBoxFor(x => x.yayinlamaTarihi, new { @class = "form-control" })
+    <br />
+
+
+
+    <button class="btn btn-danger">Güncelle</button>
+
+
+
+}

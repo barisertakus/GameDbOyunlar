@@ -1,0 +1,38 @@
+﻿@using Oyunlar.Models
+@model List<Oyun>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AnaLayout.cshtml";
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Oyun Adı</th>
+        <th>Boyut(MB)</th>
+        <th>Puan</th>
+        <th>Yayinlanma Tarihi</th>
+        <th>Kategori</th>
+        <th>Yorum Yap</th>
+        
+
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <th>@x.oyunID</th>
+            <th>@x.oyunAdi</th>
+            <th>@x.boyut</th>
+            <th>@x.puan</th>
+            <th>@x.yayinlamaTarihi</th>
+            <th>@x.Kategori.KategoriAd</th>
+
+            <th><a href="/Kullanici/YorumYap/@x.oyunID" class=" btn btn-success">Yorum Yap</a></th>
+
+        </tr>
+    }
+
+
+</table>
+
+

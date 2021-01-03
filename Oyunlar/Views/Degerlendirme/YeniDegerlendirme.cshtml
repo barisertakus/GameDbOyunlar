@@ -1,0 +1,27 @@
+﻿@model Oyunlar.Models.Degerlendirme;
+@{
+    ViewData["Title"] = "YeniDegerlendirme";
+    Layout = "~/Views/Shared/_AnaLayout.cshtml";
+}
+
+<br />
+<form class="form-group" method="post">
+
+    <b>Oyun Adı</b>
+    @Html.DropDownListFor(x => x.Oyun.oyunID, (List<SelectListItem>)ViewBag.dgr2, new { @class = "from-control" })
+    <br />
+    <b>Kullanici Adı</b>
+    @Html.DropDownListFor(x => x.Kullanici.kullaniciID, (List<SelectListItem>)ViewBag.dgr, new { @class = "from-control" })
+    <br />
+
+
+    <b>Yorum</b>
+    @Html.TextBoxFor(x => x.yorum, new { @class = "form-control" })
+    <br />
+    <b>Puan</b>
+    @Html.TextBoxFor(x => x.puan, new { @class = "form-control" })
+    <br />
+   
+    <button class="btn btn-success">Ekle</button>
+
+</form>
